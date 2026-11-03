@@ -1,0 +1,13 @@
+# Install a CUDA-compatible torch/torchvision pair using the PyTorch installer first.
+# Dependency versions are not an archival lockfile for the original experiment.
+torch
+torchvision
+numpy
+pandas
+matplotlib
+scikit-learn
+scipy
+Pillow
+tqdm
+jupyterlab
+ipykernel

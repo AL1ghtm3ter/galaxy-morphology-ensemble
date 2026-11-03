@@ -1,0 +1,31 @@
+{
+  "evaluation_scope": "Original local validation split, not the Kaggle private test set",
+  "provenance": "Values transcribed from the saved April 2026 coursework notebook output; not rerun during repository preparation.",
+  "train_fraction": 0.8,
+  "validation_fraction": 0.2,
+  "split_random_state": 42,
+  "ensemble_weights": {
+    "ViT": 0.55,
+    "Swin": 0.3,
+    "CNN": 0.15
+  },
+  "tta_views_per_model": 5,
+  "global_rmse": 0.07418,
+  "r2_uniform_average": 0.677,
+  "mean_per_image_pearson_correlation": 0.9472,
+  "mean_per_image_cosine_similarity": 0.9609,
+  "root_node_accuracy_percent": 88.28,
+  "task_rmse": {
+    "T1:Smooth": 0.09582,
+    "T2:EdgeOn": 0.09796,
+    "T3:Bar": 0.10646,
+    "T4:Spiral": 0.11708,
+    "T5:Bulge": 0.08024,
+    "T6:Odd": 0.09051,
+    "T7:Round": 0.06979,
+    "T8:OddType": 0.0389,
+    "T9:BulgeShape": 0.04462,
+    "T10:ArmWind": 0.06985,
+    "T11:ArmNum": 0.05601
+  }
+}

@@ -1,0 +1,26 @@
+# Local data, checkpoints and credentials
+data/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.zip
+*.7z
+*.csv
+.env
+.env.*
+kaggle.json
+credentials.json
+secrets.*
+# Python and notebook working files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.idea/
+.vscode/
+Report_Fig*.png
+.DS_Store
+Thumbs.db
