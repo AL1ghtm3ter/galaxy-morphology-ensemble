@@ -1,0 +1,32 @@
+name: CPU checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e ".[train,viz]"
+      - name: Run offline unit and integration checks
+        run: python -m unittest discover -s tests -v
+      - name: Check recorded-result plots and CLI
+        run: |
+          python -m galaxy_morphology --help
+          python scripts/plot_results.py --output-dir /tmp/galaxy-figures
+

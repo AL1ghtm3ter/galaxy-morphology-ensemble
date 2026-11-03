@@ -1,6 +1,13 @@
 # Local data, checkpoints and credentials
 data/
 checkpoints/
+runs/
+build/
+dist/
+*.egg-info/
+.coverage
+htmlcov/
+.pytest_cache/
 *.pth
 *.pt
 *.ckpt

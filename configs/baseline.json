@@ -1,0 +1,16 @@
+{
+  "seed": 42,
+  "validation_fraction": 0.2,
+  "image_size": 224,
+  "epochs": 15,
+  "batch_size": 8,
+  "accumulation_steps": 4,
+  "gradient_clip": 1.0,
+  "models": {
+    "vit": {"learning_rate": 0.00008, "weight_decay": 0.05, "minimum_learning_rate": 0.000001, "loss": "mse"},
+    "swin": {"learning_rate": 0.00008, "weight_decay": 0.05, "minimum_learning_rate": 0.000001, "loss": "mse"},
+    "efficientnet": {"learning_rate": 0.00005, "weight_decay": 0.01, "minimum_learning_rate": 0.0000001, "loss": "huber", "huber_delta": 0.1}
+  },
+  "ensemble": {"architectures": ["vit", "swin", "efficientnet"], "weights": [0.55, 0.30, 0.15], "tta_views": 5}
+}
+
